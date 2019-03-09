@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página de Votaciones</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
+
+  <!-- BootStrap v4.0 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- BootStrap v4.0 -->
+
+  <link rel="icon" type="image/png" href="images/favicon.png"/>
+
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title is-1">
+        Página de Votaciones
+      </h1>
+      <p class="subtitle">
+         Tenemos en cuenta tu opinión
+      </p>
+
+      <div class="columns">
+        <div class="column">
+          <h3 class="title is-3">
+            Estado actual de la votación
+          </h3>
+          <div id="entries">
+            <h4>Lunes</h4>
+            <div class="progress" style="height: 40px;">
+              <div id="prgLunes" class="progress-bar bg-info progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">0%</div>
+            </div>
+            <h4>Martes</h4>
+            <div class="progress" style="height: 40px;">
+              <div id="prgMartes" class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">0%</div>
+            </div>
+            <h4>Jueves</h4>
+            <div class="progress" style="height: 40px;">
+              <div id="prgJueves" class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">0%</div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <h3 class="title is-3">
+            Elige el día para la prueba final
+          </h3>
+          <h4 class="title is-4">
+            Ten en cuenta que si ya has votado y realizas otra votación, se cambiará tu elección.
+          </h4>
+          <form id="frmVoto">
+            <div class="field">
+              <label class="label">Nombre</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Escribe tu nombre..." id="nombre">
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Email</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="ejemplo@ejemplo.com" id="email">
+              </div>
+            </div>
+            <div id="eleccion" action="">
+              <label class="label">Día elegido</label>
+              <input type="radio" name="eleccion" value="lunes"> Lunes<br>
+              <input type="radio" name="eleccion" value="martes"> Martes<br>
+              <input type="radio" name="eleccion" value="jueves"> Jueves
+            </div>
+            <div class="control">
+              <br>
+              <button id="#btnEnviar" class="button is-primary">Enviar Voto</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="votaciones.js"></script>
+</body>
+
+</html>
